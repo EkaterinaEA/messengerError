@@ -1,8 +1,5 @@
-package com.levelp.messenger;
 
 import javax.persistence.*;
-
-import com.levelp.messenger.Client;
 
 @NamedQueries({
         @NamedQuery(name = Room.FIND_ROOM_BY_ID_QUERY, query = "from Room where id = : id"),
@@ -35,15 +32,6 @@ public class Room {
 
     @Column(name = "region", nullable = false)
     private String Region;
-
-    @OneToMany
-    private Client client;
-
-    @OneToOne
-    private Admin admin;
-
-    @OneToMany
-    private Message message;
 
     public Room() {}
 
@@ -85,28 +73,5 @@ public class Room {
         Region = region;
     }
 
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
-
-    public Admin getAdmin() {
-        return admin;
-    }
-
-    public void setAdmin(Admin admin) {
-        this.admin = admin;
-    }
-
-    public Message getMessage() {
-        return message;
-    }
-
-    public void setMessage(Message message) {
-        this.message = message;
-    }
 
 }

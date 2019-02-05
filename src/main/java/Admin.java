@@ -1,6 +1,7 @@
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 @Entity
 @DiscriminatorValue("Ad")
@@ -19,6 +20,9 @@ public class Admin extends User {
     public Admin(String login) {
         setLogin(login);
     }
+
+    @ManyToOne
+    private Room room;
 
     public String getRegion() {
         return region;

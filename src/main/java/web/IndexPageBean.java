@@ -1,7 +1,4 @@
-package web;
-
-
-import com.levelp.messenger.User;
+package com.levelp.messenger.web;
 
 import java.util.Date;
 import java.util.List;

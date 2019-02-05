@@ -1,7 +1,6 @@
-package web;
+package com.levelp.messenger.web;
 
-import com.levelp.messenger.User;
-
+import web.AddUserPageBean;
 
 import javax.persistence.EntityManager;
 import javax.servlet.ServletException;
